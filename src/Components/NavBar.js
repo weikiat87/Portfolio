@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 //import PropTypes from "prop-types";
-import TabContainer from "./TabContainer";
-import IntroComponent from "./IntroComponent";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
 import {
@@ -10,7 +8,6 @@ import {
   Tab,
   useScrollTrigger,
   Toolbar,
-  Paper
 } from "@material-ui/core";
 
 function ElevationScroll(props) {
@@ -57,14 +54,6 @@ export default function NavBar(props) {
         </AppBar>
       </ElevationScroll>
       <Toolbar variant="dense" />
-
-      <IntroComponent />
-      <TabContainer>
-        <Paper>Hello World 2</Paper>
-      </TabContainer>
-      <TabContainer>
-        <Paper>Hello World 3</Paper>
-      </TabContainer>
     </React.Fragment>
   );
 }

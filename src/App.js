@@ -1,22 +1,33 @@
 import React from "react";
-import "./App.css";
 import NavBar from "./Components/NavBar";
-import { MuiThemeProvider } from "@material-ui/core";
+import { MuiThemeProvider, Paper } from "@material-ui/core";
 import { StylesProvider } from "@material-ui/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
-import { blue, teal } from "@material-ui/core/colors";
+
+import TabContainer from "./Components/TabContainer";
+import IntroComponent from "./Components/IntroComponent";
+import AboutComponent from "./Components/AboutComponent";
 const theme = createMuiTheme({
   palette: {
-    primary: teal,
-    secondary: blue
+    primary: {
+      main: "#774413"
+    },
+    secondary: {
+      main: "#134777"
+    }
   }
 });
 export default function App() {
   return (
     <MuiThemeProvider theme={theme}>
-      <StylesProvider>
         <NavBar />
-      </StylesProvider>
+        <IntroComponent />
+        <TabContainer>
+          <AboutComponent />
+        </TabContainer>
+        <TabContainer>
+          <Paper>Hello World 3</Paper>
+        </TabContainer>
     </MuiThemeProvider>
   );
 }

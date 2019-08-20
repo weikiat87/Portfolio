@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container, Box } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 
 export default function TabContainer(props) {
     return (
-        <Container fixed maxWidth="lg">
+        <Container fixed>
                 {props.children}
         </Container>
     );
@@ -12,6 +12,6 @@ export default function TabContainer(props) {
 
 TabContainer.propTypes  = {
     children: PropTypes.node.isRequired,
-    style: PropTypes.object
+    
 };
 

@@ -1,20 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typed } from "typed.js";
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import Typed from "typed.js";
+import { Typography } from "@material-ui/core";
 
+class TypedComponent extends PureComponent {
+  componentDidMount() {
+    const { strings } = this.props;
+    const options = {
+      strings: strings,
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    };
+	this.typed = new Typed(this.el, options);
+	
+    this.typed.start();
+  }
 
-function TypedComponent(props) {
+  
+
+  componentWillUnmount() {
+    this.typed.destroy();
+  }
+  render() {
+	const { variant, align } = this.props;
     return (
-        <div>
-            
-        </div>
-    )
+      <Typography variant={variant} align={align}>
+        <span ref={el => (this.el = el)} />
+      </Typography>
+    );
+  }
 }
 
 TypedComponent.propTypes = {
-    string: PropTypes.string.isRequired,
-    startTime: PropTypes.number.isRequired,
-}
+  string: PropTypes.string.isRequired,
+  align: PropTypes.string,
+  variant: PropTypes.string
+};
 
-export default TypedComponent
-
+export default TypedComponent;
