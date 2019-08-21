@@ -36,7 +36,7 @@ function IntroComponent() {
               I am a
             </Typography>
             <TypedComponent
-              strings={["Web Developer", "AI Developer", "Games Developer"]}
+              strings={["Web Developer", "ML Engineer", "Games Developer"]}
               variant="h2"
             />
           </Box>
