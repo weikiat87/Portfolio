@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a2ae5202e9b06848425356e632a1248",
+    "revision": "2e1224ea4b27f2a19ece36ae5343306a",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "107403009df6ba8d2c6a",
-    "url": "/Portfolio/static/js/2.a80e7b52.chunk.js"
+    "revision": "d1416be9e987434bde8c",
+    "url": "/Portfolio/static/js/2.fe2900a5.chunk.js"
   },
   {
-    "revision": "1ab4b140cf6dca5ee94d",
-    "url": "/Portfolio/static/js/main.0d55f75d.chunk.js"
+    "revision": "3e50a8f676d407d1bb4e",
+    "url": "/Portfolio/static/js/main.eab33a21.chunk.js"
   },
   {
     "revision": "6b64d540f1308ee928ad",
@@ -22,9 +22,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d9049f461eb3dd661b7f77c6e56e7593",
     "url": "/Portfolio/static/media/linkedin-brands.d9049f46.svg"
-  },
-  {
-    "revision": "38d0032a0bbf58dbc24e2b07ed65811c",
-    "url": "/Portfolio/static/media/mail.38d0032a.svg"
   }
 ]);
