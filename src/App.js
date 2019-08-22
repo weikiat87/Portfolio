@@ -1,13 +1,13 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
-import { MuiThemeProvider, Paper } from "@material-ui/core";
+import { MuiThemeProvider, Paper, Container } from "@material-ui/core";
 import { StylesProvider } from "@material-ui/styles";
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
-import TabContainer from "./Components/TabContainer";
-import IntroComponent from "./Components/IntroComponent";
-import AboutComponent from "./Components/AboutComponent";
+import IntroView from "./Components/IntroView";
+import AboutView from "./Components/AboutView";
+import ActionButton from "./Components/ActionButton";
 let theme = createMuiTheme({
   palette: {
     primary: {
@@ -15,6 +15,23 @@ let theme = createMuiTheme({
     },
     secondary: {
       main: "#134777"
+    },
+    background: {
+      default: "#eeeeee"
+    }
+  },
+  overrides: {
+    MuiSvgIcon: {
+      colorAction: {
+        color: "rgba(255,255,255,0.54)"
+      }
+    },
+    MuiFab: {
+      root: {
+        position: "absolute",
+        bottom: "2rem",
+        right: "2rem"
+      }
     }
   }
 });
@@ -25,16 +42,15 @@ export default function App() {
       <CssBaseline />
       <NavBar
         changeColorOnScroll={{
-          color: "white",
+          color: "white"
         }}
       />
-      <IntroComponent />
-      <TabContainer>
-        <AboutComponent />
-      </TabContainer>
-      <TabContainer>
+      <IntroView />
+      <ActionButton />
+      <Container fixed>
+        <AboutView />
         <Paper>Hello World 3</Paper>
-      </TabContainer>
+      </Container>
     </MuiThemeProvider>
   );
 }

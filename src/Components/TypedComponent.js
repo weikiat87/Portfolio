@@ -33,7 +33,7 @@ class TypedComponent extends PureComponent {
 }
 
 TypedComponent.propTypes = {
-  string: PropTypes.string.isRequired,
+  strings: PropTypes.array.isRequired,
   align: PropTypes.string,
   variant: PropTypes.string
 };
