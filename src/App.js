@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./Components/NavBar";
-import { MuiThemeProvider, Paper, Container } from "@material-ui/core";
+import { MuiThemeProvider, Paper, Container, Grid } from "@material-ui/core";
 import { StylesProvider } from "@material-ui/styles";
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
@@ -45,12 +45,22 @@ export default function App() {
           color: "white"
         }}
       />
-      <IntroView />
+      <Grid container spacing={2} direction="column" justify="center">
+        <Grid item>
+          <IntroView />
+        </Grid>
+        <Grid item >
+          <Container maxWidth="lg">
+            <AboutView />
+          </Container>
+        </Grid>
+        <Grid item>
+          <Container  maxWidth="lg">
+            <Paper>Hello World 3</Paper>
+          </Container>
+        </Grid>
+      </Grid>
       <ActionButton />
-      <Container fixed>
-        <AboutView />
-        <Paper>Hello World 3</Paper>
-      </Container>
     </MuiThemeProvider>
   );
 }

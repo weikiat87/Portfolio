@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Slide } from "@material-ui/core";
 import TypedComponent from "./TypedComponent";
 import { makeStyles } from "@material-ui/styles";
-
+import BackgroundImage from "../images/intro-bg.jpg";
 const useStyle = makeStyles(theme => ({
   text: {
     position: "absolute",
@@ -16,12 +16,13 @@ const useStyle = makeStyles(theme => ({
   wrapper: {
     position: "relative",
     display: "block",
-    backgroundImage: "url(/images/intro-bg.jpg)",
+    backgroundImage: "url(" + BackgroundImage + ")",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backgroundPosition: "center center",
-    height: "100vh"
+    height: "100vh",
+    boxShadow: "5px 5px 5px gray"
   }
 }));
 

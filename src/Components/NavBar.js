@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Github } from "../github-brands.svg";
-import { ReactComponent as Linkedin } from "../linkedin-brands.svg";
+import { ReactComponent as Github } from "../images/github-brands.svg";
+import { ReactComponent as Linkedin } from "../images/linkedin-brands.svg";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import {

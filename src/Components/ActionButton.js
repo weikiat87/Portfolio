@@ -1,6 +1,6 @@
 import React from "react";
 import { Fab, SvgIcon, Tooltip } from "@material-ui/core";
-import { ReactComponent as Mail } from "../mail.svg";
+import { ReactComponent as Mail } from "../images/mail.svg";
 
 function ActionButton() {
   return (
